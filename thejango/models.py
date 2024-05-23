@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Gender(models.Model):
     gender_id = models.BigAutoField(primary_key=True, blank=False)
     gender = models.CharField(max_length=55, blank=False) 
@@ -10,6 +11,7 @@ class Gender(models.Model):
 
     class Meta:
         db_table = 'genders'
+
 
 class User(models.Model):
     user_id = models.BigAutoField(primary_key=True, blank=False)
