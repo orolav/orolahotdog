@@ -11,6 +11,9 @@ class Gender(models.Model):
 
     class Meta:
         db_table = 'genders'
+        
+    def __str__(self):
+        return self.gender
 
 
 class User(models.Model):

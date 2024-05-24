@@ -1,0 +1,21 @@
+{% extends "layout/base.html" %}
+
+{% block title %}
+Edit User
+{% endblock title %}
+
+{% block content %}
+
+<div class="col-md-6 mx-auto mt-3">
+    <form action="/user/upadte/{{ user.user_id }}" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="user">User</label>
+            <input type="text" class="form-control" id="user" name="user" value="{{ user.username}}" />
+        </div>
+        <button type="submit" class="btn btn-success float-end col-12 col-md-3">Update User</button>
+        <a href="/users" class="btn btn-secondary float-end col-12 col-md-3 me-1">Back</a>
+    </form>
+</div>
+
+{% endblock content %}
